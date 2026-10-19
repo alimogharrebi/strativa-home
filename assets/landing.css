@@ -507,18 +507,67 @@ img, svg { display: block; max-width: 100%; }
   content: ''; position: absolute; width: 620px; height: 620px; border-radius: 50%;
   inset-inline-start: -220px; bottom: -300px; background: radial-gradient(circle, rgba(20, 184, 166, .38), transparent 68%); filter: blur(30px);
 }
-.cta-inner { position: relative; display: grid; grid-template-columns: 1.25fr .9fr; gap: 40px; align-items: center; }
+.cta-inner { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 44px; align-items: center; }
 .cta-copy h2 { font-size: clamp(1.6rem, 3.2vw, 2.25rem); margin-bottom: 16px; }
 .cta-copy p { color: rgba(226, 231, 250, .8); font-size: 1.03rem; max-width: 56ch; }
+.kicker-light { color: #b9f3e8; background: rgba(53, 214, 189, .14); }
 .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
-.cta-list { display: grid; gap: 14px; }
+.cta-list { display: grid; gap: 12px; margin-top: 24px; }
 .cta-list li { display: flex; gap: 11px; align-items: flex-start; font-size: .95rem; color: #e6eaf8; }
 .cta-list .ic { width: 20px; height: 20px; color: #35d6bd; margin-top: 4px; }
+
+/* ── contact card ───────────────────────────────────────────────────────── */
+.contact-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .05));
+  border: 1px solid rgba(255, 255, 255, .17);
+  border-radius: var(--r-lg);
+  padding: 26px 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 34px 70px -34px rgba(0, 0, 0, .7), inset 0 1px 0 rgba(255, 255, 255, .1);
+}
+.cc-head { display: flex; align-items: center; gap: 14px; }
+.cc-avatar {
+  width: 58px; height: 58px; border-radius: 18px; flex: none; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--brand-2), var(--teal));
+  color: #fff; font-weight: 800; font-size: 1.02rem; letter-spacing: .5px;
+  box-shadow: 0 14px 30px -14px rgba(124, 108, 247, .95);
+}
+.cc-name b { display: block; font-size: 1.12rem; color: #fff; }
+.cc-name small { display: block; font-size: .76rem; color: rgba(255, 255, 255, .55); letter-spacing: .4px; }
+.cc-role { margin-top: 16px; font-size: .92rem; color: rgba(230, 235, 250, .88); line-height: 1.95; }
+.cc-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.cc-tags li {
+  font-size: .74rem; font-weight: 600; color: #dfe4f7;
+  background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: var(--r-pill); padding: 5px 12px;
+}
+.cc-links { display: grid; gap: 4px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, .13); }
+.cc-links a {
+  display: flex; align-items: center; gap: 12px; padding: 9px 10px; border-radius: var(--r-xs);
+  transition: background-color .2s var(--ease), color .2s var(--ease);
+}
+.cc-links a:hover { background: rgba(255, 255, 255, .09); }
+.cc-ic { width: 34px; height: 34px; border-radius: 11px; flex: none; display: grid; place-items: center; background: rgba(255, 255, 255, .1); color: #35d6bd; }
+.cc-ic .ic { width: 17px; height: 17px; }
+.cc-links small { display: block; font-size: .7rem; color: rgba(255, 255, 255, .5); }
+.cc-links b { display: block; font-size: .92rem; color: #fff; font-weight: 600; }
+.cc-note {
+  margin-top: 16px; display: flex; align-items: center; gap: 8px;
+  font-size: .78rem; color: rgba(255, 255, 255, .55);
+}
+.cc-note .ic { width: 15px; height: 15px; }
+.ltr { direction: ltr; unicode-bidi: isolate; }
 
 /* ── footer ─────────────────────────────────────────────────────────────── */
 .footer { background: #070c18; color: #9aa4bd; padding: 60px 0 26px; }
 .footer-inner { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 32px; }
 .footer-brand p { margin-top: 14px; font-size: .88rem; line-height: 1.95; color: #7c88a3; max-width: 34ch; }
+.footer-sign {
+  margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .09);
+  font-size: .84rem !important; color: #8d98b3 !important;
+}
+.footer-sign b { display: block; color: #e7ecf8; font-size: .93rem; margin-bottom: 2px; }
 .brand-dark .brand-text b { color: #fff; }
 .brand-dark .brand-text i { color: #7c88a3; }
 .footer-col { display: grid; gap: 10px; align-content: start; }
